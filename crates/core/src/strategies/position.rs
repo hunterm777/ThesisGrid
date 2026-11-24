@@ -26,7 +26,7 @@ impl Strategy {
             legs.push(Self::leg(l, s, th, base_iv)?);
         }
         let fee = s.fee_per_contract;
-        let (model, rate, as_of, s0, day) = (s.model, th.rate, th.as_of, th.spot, th.day_count());
+        let (model, rate, as_of, s0, day) = (s.model, th.rate, th.as_of, th.spot, th.vol_clock());
         Ok(Strategy {
             legs,
             fee,

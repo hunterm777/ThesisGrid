@@ -2,7 +2,11 @@
 //! overridden by the user.
 
 use crate::fees::BinaryFees;
-use crate::fees::{hyperliquid::Hip4Fees, kalshi::KalshiFees, polymarket::PolymarketFees};
+use crate::fees::{
+    hyperliquid::{hip3_rate, Hip4Fees},
+    kalshi::KalshiFees,
+    polymarket::PolymarketFees,
+};
 use crate::thesis::AssetClass;
 use serde::{Deserialize, Serialize};
 
@@ -124,8 +128,8 @@ pub fn perp(venue: Venue, asset: AssetClass) -> Option<PerpPreset> {
                 _ => None,
             },
             mm_factor: Some(0.5),
-            taker_fee: 0.000_45,
-            maker_fee: 0.000_15,
+            taker_fee: hl_fee(asset, HL_TAKER),
+            maker_fee: hl_fee(asset, HL_MAKER),
             funding_period_hours: 8.0,
             funding_interval_hours: 1.0,
             funding_cap: Some(0.005),
@@ -158,6 +162,21 @@ fn kalshi_notes(asset: AssetClass) -> Vec<&'static str> {
     n
 }
 
+/// Base-tier (tier 0) perp rates for validator-operated perps.
+const HL_TAKER: f64 = 0.000_45;
+const HL_MAKER: f64 = 0.000_15;
+
+/// Stock perps use xyz:NVDA's fees (deployer scale 1, growth mode on); crypto
+/// uses the base tier; index and commodity builder markets keep the base tier
+/// until checked.
+fn hl_fee(asset: AssetClass, base: f64) -> f64 {
+    if asset == AssetClass::Stock {
+        hip3_rate(base, 1.0, true)
+    } else {
+        base
+    }
+}
+
 fn hyperliquid_notes(asset: AssetClass) -> Vec<&'static str> {
     if asset == AssetClass::Crypto {
         return vec![
@@ -165,16 +184,20 @@ fn hyperliquid_notes(asset: AssetClass) -> Vec<&'static str> {
             "Fees are the base-tier rates for validator-operated perps.",
         ];
     }
-    let mut n = vec![
-        "Stock, index and commodity perps are HIP-3 builder markets: fees depend on the \
-         deployer's fee scale and growth mode, so the base-tier rates shown may not match.",
-    ];
-    n.push(if asset == AssetClass::Stock {
-        "Max leverage 10x is xyz:NVDA's as of Nov 16, 2026; each builder market sets its own."
-    } else {
-        "Each builder market sets its own max leverage; enter yours."
-    });
-    n
+    if asset == AssetClass::Stock {
+        return vec![
+            "Stock perps are HIP-3 builder markets. Fees are xyz:NVDA's as shown on its market \
+             page on Nov 24, 2026 (0.009% taker, 0.003% maker): the base tier times 2 for a \
+             deployer fee scale of 1, less 90% for growth mode, per Hyperliquid's fee docs. \
+             Other builder markets may differ.",
+            "Max leverage 10x is xyz:NVDA's as of Nov 24, 2026; each builder market sets its own.",
+        ];
+    }
+    vec![
+        "Index and commodity perps are HIP-3 builder markets: fees depend on the deployer's \
+         fee scale and growth mode, so the base-tier rates shown may not match.",
+        "Each builder market sets its own max leverage; enter yours.",
+    ]
 }
 
 /// A binary venue's default fee model and caveats.
@@ -236,6 +259,10 @@ mod tests {
                 .max_leverage,
             Some(10.0)
         );
+        let hs = perp(Venue::Hyperliquid, AssetClass::Stock).unwrap();
+        assert!((hs.taker_fee - 0.000_09).abs() < 1e-15);
+        assert!((hs.maker_fee - 0.000_03).abs() < 1e-15);
+        assert_eq!(hl.taker_fee, 0.000_45);
         assert!(perp(Venue::Custom, AssetClass::Crypto).is_none());
         assert_eq!(all_perps().len(), 12);
         for v in [

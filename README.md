@@ -25,7 +25,7 @@ Every input is editable: prices, strikes, implied volatility, leverage, funding,
 | --- | --- |
 | Shares / spot | Linear P&L, entry and exit fees, an optional stop for max-loss sizing. |
 | Perps | Leverage, maintenance margin, funding charged on entry notional each period, the venue's liquidation price with funding included, maker or taker fees. Cells the price can't reach without crossing liquidation are marked. |
-| Options | Black-Scholes, or Black-76 for options on futures (chosen per position), full Greeks, 12 named strategies from long calls to iron condors and butterflies, or custom legs. |
+| Options | Black-Scholes, or Black-76 for options on futures (chosen per position), time to expiry on a 365-day calendar for stocks, indices and crypto (how listed-option IVs are quoted), full Greeks, 12 named strategies from long calls to iron condors and butterflies, or custom legs. |
 | Binaries | Digital option pricing (pays at or above the strike, or inside a range), implied vol solved from the contract price, Kalshi and Polymarket fee schedules. |
 
 Each grid shows P&L in dollars or as a percent of capital, with the target price row and target date column marked. A summary table gives size, cost, max loss, max gain, breakeven and P&L at target, and a payoff chart overlays every instrument at the target date. A scenario travels as a link (the whole scenario lives in the URL hash) and exports to CSV or PNG.

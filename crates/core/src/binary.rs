@@ -179,7 +179,7 @@ impl Binary {
             rate: th.rate,
             s0: th.spot,
             tau0: th.tau(th.as_of, s.expiry),
-            day: th.day_count(),
+            day: th.vol_clock(),
         };
         b.iv = match s.iv {
             Some(v) if v > 0.0 => v,

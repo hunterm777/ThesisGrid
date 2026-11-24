@@ -66,9 +66,37 @@ impl Hip4Fees {
     }
 }
 
+/// All-in fee rate on a HIP-3 builder perp, from a validator-operated perp
+/// base rate. From Hyperliquid's fee docs ("Fee formula for developers"):
+/// the base rate is multiplied by `scale + 1` when the deployer fee scale is
+/// below 1 and by `2 x scale` otherwise. Growth mode gives "a >=90%
+/// reduction on the all-in fees"; ThesisGrid applies exactly 90%.
+pub fn hip3_rate(base: f64, deployer_scale: f64, growth_mode: bool) -> f64 {
+    let mult = if deployer_scale < 1.0 {
+        deployer_scale + 1.0
+    } else {
+        2.0 * deployer_scale
+    };
+    let growth = if growth_mode { 0.1 } else { 1.0 };
+    base * mult * growth
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn hip3_multiplier_and_growth_mode() {
+        let close = |a: f64, b: f64| (a - b).abs() < 1e-15;
+        assert!(close(hip3_rate(0.000_45, 0.5, false), 0.000_675));
+        assert!(close(hip3_rate(0.000_45, 1.0, false), 0.0009));
+        assert!(close(hip3_rate(0.000_45, 3.0, false), 0.0027));
+        // Docs: growth-mode all-in taker is 0.0045% to 0.009%.
+        assert!(close(hip3_rate(0.000_45, 0.0, true), 0.000_045));
+        assert!(close(hip3_rate(0.000_45, 1.0, true), 0.000_09));
+        // xyz:NVDA's page on Nov 24 2026: 0.0090% taker, 0.0030% maker.
+        assert!(close(hip3_rate(0.000_15, 1.0, true), 0.000_03));
+    }
 
     #[test]
     fn close_and_settle_only() {

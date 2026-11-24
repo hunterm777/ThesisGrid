@@ -3,17 +3,18 @@
 use crate::{err, Date, Res};
 use serde::{Deserialize, Serialize};
 
-/// What the underlying is. Sets the day count, the time axis and the venue
-/// presets on offer.
+/// What the underlying is. Sets the grid's time axis, the pricing clock and
+/// the venue presets on offer.
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
 pub enum AssetClass {
     /// Crypto: 365 calendar days, trades 24/7.
     #[default]
     Crypto,
-    /// Single stock: 252 trading days.
+    /// Single stock: grid steps in trading days; options and binaries are
+    /// priced on 365 calendar days, as listed-option IVs are quoted.
     Stock,
-    /// Index or ETF: 252 trading days.
+    /// Index or ETF: same as a single stock.
     Index,
     /// Commodity: day count per the user's setting.
     Commodity,
@@ -122,12 +123,23 @@ pub struct Thesis {
 }
 
 impl Thesis {
-    /// Day count for this asset class: 252 trading days for stocks and
-    /// indices, 365 calendar days for crypto, the user's choice for commodities.
+    /// Day count for the grid's date axis: trading days (weekdays) for stocks
+    /// and indices, calendar days for crypto, the user's choice for commodities.
     pub fn day_count(&self) -> DayCount {
         match self.asset_class {
             AssetClass::Stock | AssetClass::Index => DayCount::Trading252,
             AssetClass::Crypto => DayCount::Calendar365,
+            AssetClass::Commodity => self.commodity_day_count,
+        }
+    }
+
+    /// Clock for option and binary pricing (time to expiry and theta):
+    /// 365 calendar days for stocks, indices and crypto, matching how
+    /// exchanges and data vendors quote implied volatility; the user's
+    /// choice for commodities.
+    pub fn vol_clock(&self) -> DayCount {
+        match self.asset_class {
+            AssetClass::Stock | AssetClass::Index | AssetClass::Crypto => DayCount::Calendar365,
             AssetClass::Commodity => self.commodity_day_count,
         }
     }
@@ -161,9 +173,9 @@ impl Thesis {
         Ok(())
     }
 
-    /// Year fraction from `a` to `b` on this thesis's day count.
+    /// Year fraction from `a` to `b` on this thesis's pricing clock.
     pub fn tau(&self, a: Date, b: Date) -> f64 {
-        self.day_count().year_frac(a, b)
+        self.vol_clock().year_frac(a, b)
     }
 }
 
@@ -184,11 +196,17 @@ mod tests {
         assert_eq!(t.iv, 0.5);
         assert_eq!(t.day_count(), DayCount::Calendar365);
         assert_eq!(t.direction(), Direction::Bullish);
+        assert_eq!(t.vol_clock(), DayCount::Calendar365);
         t.asset_class = AssetClass::Stock;
         assert_eq!(t.day_count(), DayCount::Trading252);
+        assert_eq!(t.vol_clock(), DayCount::Calendar365);
+        t.asset_class = AssetClass::Index;
+        assert_eq!(t.day_count(), DayCount::Trading252);
+        assert_eq!(t.vol_clock(), DayCount::Calendar365);
         t.asset_class = AssetClass::Commodity;
         t.commodity_day_count = DayCount::Trading252;
         assert_eq!(t.day_count(), DayCount::Trading252);
+        assert_eq!(t.vol_clock(), DayCount::Trading252);
         t.target = 80_000.0;
         assert_eq!(t.direction(), Direction::Bearish);
         assert!(t.validate().is_ok());
