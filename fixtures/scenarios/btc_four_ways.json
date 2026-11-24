@@ -1,0 +1,8 @@
+{"thesis":{"underlying":"BTC","asset_class":"crypto","spot":95000,"target":110000,
+  "target_date":"2026-12-31","as_of":"2026-11-24","rate":0.04,"iv":0.55},
+ "mode":"equal_max_loss","budget":500,
+ "instruments":[
+  {"kind":"spot","stop":85000,"fee_pct":0.001},
+  {"kind":"perp","venue":"hyperliquid","leverage":5,"funding_rate":0.0001},
+  {"kind":"option","strategy":"bull_call_spread","strikes":[100000,115000],"expiry":"2026-12-31","fee_per_contract":0.5},
+  {"kind":"binary","venue":"kalshi","strike":110000,"expiry":"2026-12-31","price":0.2}]}

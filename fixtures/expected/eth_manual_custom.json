@@ -1,0 +1,1022 @@
+{
+  "budget": 1000.0,
+  "columns": [
+    {
+      "cells": [
+        [
+          {
+            "delta": 2.0,
+            "fees": 22.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -22.18687624750499,
+            "pnl": -1422.8,
+            "theta": 0.0,
+            "value": 5000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 22.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -22.18687624750499,
+            "pnl": -1422.8,
+            "theta": 0.0,
+            "value": 5000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 22.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -22.18687624750499,
+            "pnl": -1422.8,
+            "theta": 0.0,
+            "value": 5000.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 2.0,
+            "fees": 24.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -6.624251497005988,
+            "pnl": -424.8,
+            "theta": 0.0,
+            "value": 6000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 24.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -6.624251497005988,
+            "pnl": -424.8,
+            "theta": 0.0,
+            "value": 6000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 24.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -6.624251497005988,
+            "pnl": -424.8,
+            "theta": 0.0,
+            "value": 6000.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 2.0,
+            "fees": 25.6,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -0.3992015968063872,
+            "pnl": -25.6,
+            "theta": 0.0,
+            "value": 6400.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 25.6,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -0.3992015968063872,
+            "pnl": -25.6,
+            "theta": 0.0,
+            "value": 6400.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 25.6,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -0.3992015968063872,
+            "pnl": -25.6,
+            "theta": 0.0,
+            "value": 6400.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 2.0,
+            "fees": 26.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 8.938373253493015,
+            "pnl": 573.2,
+            "theta": 0.0,
+            "value": 7000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 26.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 8.938373253493015,
+            "pnl": 573.2,
+            "theta": 0.0,
+            "value": 7000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 26.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 8.938373253493015,
+            "pnl": 573.2,
+            "theta": 0.0,
+            "value": 7000.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 2.0,
+            "fees": 28.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 24.500998003992017,
+            "pnl": 1571.2,
+            "theta": 0.0,
+            "value": 8000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 28.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 24.500998003992017,
+            "pnl": 1571.2,
+            "theta": 0.0,
+            "value": 8000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 28.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 24.500998003992017,
+            "pnl": 1571.2,
+            "theta": 0.0,
+            "value": 8000.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 2.0,
+            "fees": 30.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 40.063622754491014,
+            "pnl": 2569.2,
+            "theta": 0.0,
+            "value": 9000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 30.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 40.063622754491014,
+            "pnl": 2569.2,
+            "theta": 0.0,
+            "value": 9000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 2.0,
+            "fees": 30.8,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 40.063622754491014,
+            "pnl": 2569.2,
+            "theta": 0.0,
+            "value": 9000.0,
+            "vega": 0.0
+          }
+        ]
+      ],
+      "error": null,
+      "kind": "spot",
+      "label": "spot",
+      "notes": [],
+      "summary": {
+        "breakevens": [
+          3212.825651302606
+        ],
+        "cost": 6412.8,
+        "dollar_delta": 6400.0,
+        "liquidation": null,
+        "max_gain": null,
+        "max_loss": 6412.8,
+        "pnl_at_target": 1571.2,
+        "qty": 2.0,
+        "roc_at_target": 24.500998003992017
+      },
+      "venue": null
+    },
+    {
+      "cells": [
+        [
+          {
+            "delta": 0.0,
+            "fees": 2.88,
+            "funding": 10.080000000000002,
+            "gamma": 0.0,
+            "liquidated": true,
+            "pct": -100.0,
+            "pnl": -602.88,
+            "theta": 0.0,
+            "value": 0.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 0.0,
+            "fees": 2.88,
+            "funding": 23.040000000000003,
+            "gamma": 0.0,
+            "liquidated": true,
+            "pct": -100.0,
+            "pnl": -602.88,
+            "theta": 0.0,
+            "value": 0.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 0.0,
+            "fees": 2.88,
+            "funding": 43.2,
+            "gamma": 0.0,
+            "liquidated": true,
+            "pct": -100.0,
+            "pnl": -602.88,
+            "theta": 0.0,
+            "value": 0.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 1.5,
+            "fees": 5.58,
+            "funding": 10.080000000000002,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -52.35867834394904,
+            "pnl": -315.65999999999997,
+            "theta": 0.0,
+            "value": 4500.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 1.5,
+            "fees": 5.58,
+            "funding": 23.040000000000003,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -54.508359872611464,
+            "pnl": -328.62,
+            "theta": 0.0,
+            "value": 4500.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 1.5,
+            "fees": 5.58,
+            "funding": 43.2,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -57.852308917197455,
+            "pnl": -348.78,
+            "theta": 0.0,
+            "value": 4500.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 1.5,
+            "fees": 5.76,
+            "funding": 10.080000000000002,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -2.6273885350318475,
+            "pnl": -15.840000000000002,
+            "theta": 0.0,
+            "value": 4800.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 1.5,
+            "fees": 5.76,
+            "funding": 23.040000000000003,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -4.777070063694269,
+            "pnl": -28.800000000000004,
+            "theta": 0.0,
+            "value": 4800.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 1.5,
+            "fees": 5.76,
+            "funding": 43.2,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -8.121019108280255,
+            "pnl": -48.96,
+            "theta": 0.0,
+            "value": 4800.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 1.5,
+            "fees": 6.029999999999999,
+            "funding": 10.080000000000002,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 71.96954617834396,
+            "pnl": 433.89,
+            "theta": 0.0,
+            "value": 5250.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 1.5,
+            "fees": 6.029999999999999,
+            "funding": 23.040000000000003,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 69.81986464968153,
+            "pnl": 420.93,
+            "theta": 0.0,
+            "value": 5250.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 1.5,
+            "fees": 6.029999999999999,
+            "funding": 43.2,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 66.47591560509555,
+            "pnl": 400.77,
+            "theta": 0.0,
+            "value": 5250.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 1.5,
+            "fees": 6.48,
+            "funding": 10.080000000000002,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 196.29777070063693,
+            "pnl": 1183.44,
+            "theta": 0.0,
+            "value": 6000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 1.5,
+            "fees": 6.48,
+            "funding": 23.040000000000003,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 194.14808917197453,
+            "pnl": 1170.48,
+            "theta": 0.0,
+            "value": 6000.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 1.5,
+            "fees": 6.48,
+            "funding": 43.2,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 190.80414012738856,
+            "pnl": 1150.32,
+            "theta": 0.0,
+            "value": 6000.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 1.5,
+            "fees": 6.93,
+            "funding": 10.080000000000002,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 320.62599522292993,
+            "pnl": 1932.99,
+            "theta": 0.0,
+            "value": 6750.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 1.5,
+            "fees": 6.93,
+            "funding": 23.040000000000003,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 318.4763136942675,
+            "pnl": 1920.03,
+            "theta": 0.0,
+            "value": 6750.0,
+            "vega": 0.0
+          },
+          {
+            "delta": 1.5,
+            "fees": 6.93,
+            "funding": 43.2,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 315.1323646496815,
+            "pnl": 1899.87,
+            "theta": 0.0,
+            "value": 6750.0,
+            "vega": 0.0
+          }
+        ]
+      ],
+      "error": null,
+      "kind": "perp",
+      "label": "perp",
+      "notes": [],
+      "summary": {
+        "breakevens": [
+          3232.6595957574546
+        ],
+        "cost": 602.88,
+        "dollar_delta": 4800.0,
+        "liquidation": 2916.666666666667,
+        "max_gain": null,
+        "max_loss": 602.88,
+        "pnl_at_target": 1150.32,
+        "qty": 1.5,
+        "roc_at_target": 190.80414012738856
+      },
+      "venue": "custom"
+    },
+    {
+      "cells": [
+        [
+          {
+            "delta": 1.54797979290763,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.00029234218213271826,
+            "liquidated": false,
+            "pct": -25.4644400870182,
+            "pnl": -1283.4077803857174,
+            "theta": -0.8733076988840583,
+            "value": 3756.592219614283,
+            "vega": 0.6855289764538426
+          },
+          {
+            "delta": 1.5105875512751952,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.00010185543662236186,
+            "liquidated": false,
+            "pct": -25.575928058994503,
+            "pnl": -1289.0267741733232,
+            "theta": -0.33192662072638685,
+            "value": 3750.9732258266768,
+            "vega": 0.15096463814908226
+          },
+          {
+            "delta": 1.5,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -25.595238095238095,
+            "pnl": -1290.0,
+            "theta": 0.0,
+            "value": 3750.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 1.9141948413502496,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0011721654808570638,
+            "liquidated": false,
+            "pct": -8.673130742872422,
+            "pnl": -437.12578944077006,
+            "theta": -4.602469029537224,
+            "value": 4602.87421055923,
+            "vega": 3.8123074803249586
+          },
+          {
+            "delta": 1.8098487832632248,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0013542049301685994,
+            "liquidated": false,
+            "pct": -9.637130029410535,
+            "pnl": -485.7113534822911,
+            "theta": -6.093021301206452,
+            "value": 4554.288646517709,
+            "vega": 2.837441163362013
+          },
+          {
+            "delta": 1.5,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -10.714285714285714,
+            "pnl": -540.0,
+            "theta": 0.0,
+            "value": 4500.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 2.165519846488595,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0012929128408449826,
+            "liquidated": false,
+            "pct": -0.5865422587723773,
+            "pnl": -29.561729842127814,
+            "theta": -5.1856658107817895,
+            "value": 5010.4382701578725,
+            "vega": 4.588698239909658
+          },
+          {
+            "delta": 2.141214053377592,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0018933079499201975,
+            "liquidated": false,
+            "pct": -1.833908767739612,
+            "pnl": -92.42900189407642,
+            "theta": -9.199338907917848,
+            "value": 4947.5709981059235,
+            "vega": 4.414118924269672
+          },
+          {
+            "delta": 1.5,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -4.761904761904762,
+            "pnl": -240.0,
+            "theta": 0.0,
+            "value": 4800.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 2.512517678319578,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0009174589498598424,
+            "liquidated": false,
+            "pct": 13.392867043421168,
+            "pnl": 675.0004989884269,
+            "theta": -2.418951141848382,
+            "value": 5715.000498988427,
+            "vega": 3.2379791798934177
+          },
+          {
+            "delta": 2.7011248681358984,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0015829776857848705,
+            "liquidated": false,
+            "pct": 12.624474844481872,
+            "pnl": 636.2735321618864,
+            "theta": -7.013453208857282,
+            "value": 5676.273532161887,
+            "vega": 3.9736189270329776
+          },
+          {
+            "delta": 1.5,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 4.166666666666667,
+            "pnl": 210.0,
+            "theta": 0.0,
+            "value": 5250.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 2.658670429367702,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": -0.0003171454757613984,
+            "liquidated": false,
+            "pct": 39.56882072427055,
+            "pnl": 1994.2685645032357,
+            "theta": 8.799981851091424,
+            "value": 7034.268564503236,
+            "vega": -4.016823000501099
+          },
+          {
+            "delta": 2.9224558445181175,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": -0.0006911208273065292,
+            "liquidated": false,
+            "pct": 41.502375140435014,
+            "pnl": 2091.719707077925,
+            "theta": 13.606015123528612,
+            "value": 7131.719707077925,
+            "vega": -4.20419218818262
+          },
+          {
+            "delta": 4.5,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 48.80952380952381,
+            "pnl": 2460.0,
+            "theta": 0.0,
+            "value": 7500.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 2.3278169226638044,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": -0.0008407538635048047,
+            "liquidated": false,
+            "pct": 64.51803073173973,
+            "pnl": 3251.7087488796824,
+            "theta": 15.455139929312214,
+            "value": 8291.708748879682,
+            "vega": -8.81330991522292
+          },
+          {
+            "delta": 2.3310346940109627,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": -0.001311305422247342,
+            "liquidated": false,
+            "pct": 67.80752057685086,
+            "pnl": 3417.499037073284,
+            "theta": 22.066017898863784,
+            "value": 8457.499037073285,
+            "vega": -7.955688365680576
+          },
+          {
+            "delta": 1.5,
+            "fees": 0.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 75.5952380952381,
+            "pnl": 3810.0,
+            "theta": 0.0,
+            "value": 8850.0,
+            "vega": 0.0
+          }
+        ]
+      ],
+      "error": null,
+      "kind": "option",
+      "label": "option",
+      "notes": [],
+      "summary": {
+        "breakevens": [
+          3360.0
+        ],
+        "cost": 5040.0,
+        "dollar_delta": 6872.33577938796,
+        "liquidation": null,
+        "max_gain": null,
+        "max_loss": 5040.0,
+        "pnl_at_target": 2460.0,
+        "qty": 3.0,
+        "roc_at_target": 48.80952380952381
+      },
+      "venue": null
+    },
+    {
+      "cells": [
+        [
+          {
+            "delta": 0.04427851680171486,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": 0.00012062604599190448,
+            "liquidated": false,
+            "pct": -92.72231774095532,
+            "pnl": -88.08620185390757,
+            "theta": -1.0536806080191747,
+            "value": 11.913798146092438,
+            "vega": 0.4798565752505863
+          },
+          {
+            "delta": 0.018867201989152513,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": 0.0000868671639824317,
+            "liquidated": false,
+            "pct": -101.75508851542423,
+            "pnl": -96.66733408965304,
+            "theta": -0.7587933883537296,
+            "value": 3.332665910346961,
+            "vega": 0.21034209758008632
+          },
+          {
+            "delta": 0.0,
+            "fees": 5.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -100.0,
+            "pnl": -95.0,
+            "theta": -0.0,
+            "value": 0.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 0.11835667481721776,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": 0.0001568120451561071,
+            "liquidated": false,
+            "pct": -50.743298100941,
+            "pnl": -48.20613319589395,
+            "theta": -1.9724672727654935,
+            "value": 51.793866804106045,
+            "vega": 0.8982811139349443
+          },
+          {
+            "delta": 0.10061392820620628,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": 0.0002297802928465936,
+            "liquidated": false,
+            "pct": -73.58311904091678,
+            "pnl": -69.90396308887094,
+            "theta": -2.890301616276865,
+            "value": 30.096036911129055,
+            "vega": 0.8012090167598801
+          },
+          {
+            "delta": 0.0,
+            "fees": 5.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -100.0,
+            "pnl": -95.0,
+            "theta": -0.0,
+            "value": 0.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 0.14809178745029689,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": 0.00013748805754116157,
+            "liquidated": false,
+            "pct": -22.62801280965635,
+            "pnl": -21.496612169173535,
+            "theta": -1.9676724753374812,
+            "value": 78.50338783082645,
+            "vega": 0.8960975157408467
+          },
+          {
+            "delta": 0.1484499744955398,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": 0.0002413308228417242,
+            "liquidated": false,
+            "pct": -47.40685491158269,
+            "pnl": -45.03651216600355,
+            "theta": -3.453827379982016,
+            "value": 54.963487833996446,
+            "vega": 0.9574217526606636
+          },
+          {
+            "delta": 0.0,
+            "fees": 5.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -100.0,
+            "pnl": -95.0,
+            "theta": -0.0,
+            "value": 0.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 0.1815633890744855,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": 0.00008180756646336322,
+            "liquidated": false,
+            "pct": 29.86569112172936,
+            "pnl": 28.37240656564289,
+            "theta": -1.4006107014387468,
+            "value": 128.37240656564288,
+            "vega": 0.6378519727293753
+          },
+          {
+            "delta": 0.2135393598427558,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": 0.00017767838324663404,
+            "liquidated": false,
+            "pct": 10.257244922178314,
+            "pnl": 9.7443826760694,
+            "theta": -3.041995450396626,
+            "value": 109.7443826760694,
+            "vega": 0.8432594612530022
+          },
+          {
+            "delta": 0.0,
+            "fees": 5.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": -100.0,
+            "pnl": -95.0,
+            "theta": -0.0,
+            "value": 0.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 0.19509992693386655,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": -0.00002438749086673333,
+            "liquidated": false,
+            "pct": 131.3464074526867,
+            "pnl": 124.77908708005236,
+            "theta": 0.5453495763924011,
+            "value": 224.77908708005236,
+            "vega": -0.24835759342099753
+          },
+          {
+            "delta": 0.2508549672429405,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": -0.00003135687090536756,
+            "liquidated": false,
+            "pct": 137.1603238000712,
+            "pnl": 130.30230761006766,
+            "theta": 0.7011978542064746,
+            "value": 230.3023076100677,
+            "vega": -0.1943762686077714
+          },
+          {
+            "delta": 0.0,
+            "fees": 5.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 426.3157894736843,
+            "pnl": 405.00000000000006,
+            "theta": -0.0,
+            "value": 500.0,
+            "vega": 0.0
+          }
+        ],
+        [
+          {
+            "delta": 0.16512920394230512,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": -0.00008557541316830532,
+            "liquidated": false,
+            "pct": 227.48605721126415,
+            "pnl": 216.11175435070095,
+            "theta": 2.4219318020794964,
+            "value": 316.11175435070095,
+            "vega": -1.102971708116696
+          },
+          {
+            "delta": 0.1980920996250958,
+            "fees": 10.0,
+            "funding": 0.0,
+            "gamma": -0.00015450278845835597,
+            "liquidated": false,
+            "pct": 258.0136165803292,
+            "pnl": 245.11293575131276,
+            "theta": 4.372695415928702,
+            "value": 345.1129357513128,
+            "vega": -1.2121375067075606
+          },
+          {
+            "delta": 0.0,
+            "fees": 5.0,
+            "funding": 0.0,
+            "gamma": 0.0,
+            "liquidated": false,
+            "pct": 426.3157894736843,
+            "pnl": 405.00000000000006,
+            "theta": -0.0,
+            "value": 500.0,
+            "vega": 0.0
+          }
+        ]
+      ],
+      "error": null,
+      "kind": "binary",
+      "label": "binary",
+      "notes": [],
+      "summary": {
+        "breakevens": [],
+        "cost": 95.0,
+        "dollar_delta": 453.06895009344447,
+        "liquidation": null,
+        "max_gain": 405.0,
+        "max_loss": 95.0,
+        "pnl_at_target": 405.00000000000006,
+        "qty": 500.0,
+        "roc_at_target": 426.3157894736843
+      },
+      "venue": "custom"
+    }
+  ],
+  "dates": [
+    "2026-12-01",
+    "2026-12-10",
+    "2026-12-24"
+  ],
+  "display": "dollars",
+  "mode": "manual",
+  "presets_as_of": "2026-11-24",
+  "prices": [
+    2500.0,
+    3000.0,
+    3200.0,
+    3500.0,
+    4000.0,
+    4500.0
+  ],
+  "sizing_note": "Manual: sizes typed by hand. Spot locked at 2. Perp locked at 1.5. Perp sized at 8x with liquidation at $2,917. Option locked at 3. Binary locked at 500.",
+  "target_col": 2,
+  "target_row": 4
+}

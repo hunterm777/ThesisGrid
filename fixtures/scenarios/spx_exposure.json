@@ -1,0 +1,10 @@
+{"thesis":{"underlying":"SPX","asset_class":"index","spot":6800,"target":7100,
+  "target_date":"2026-12-18","as_of":"2026-11-24","iv":0.16,"rate":0.039},
+ "mode":"equal_exposure","budget":10000,
+ "instruments":[
+  {"kind":"spot"},
+  {"kind":"perp","venue":"hyperliquid","asset":"index","leverage":10,"max_leverage":20},
+  {"kind":"option","strategy":"iron_condor","strikes":[6500,6600,7000,7100],"expiry":"2026-12-18"},
+  {"kind":"option","strategy":"straddle","strikes":[6800],"expiry":"2026-12-18"},
+  {"kind":"option","strategy":"butterfly","strikes":[6900,7100,7300],"expiry":"2026-12-18"}],
+ "grid":{"prices":{"kind":"range","lo":6000,"hi":7600,"steps":16},"dates":{"step":2}}}

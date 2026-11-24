@@ -1,0 +1,7 @@
+{"thesis":{"underlying":"SOL","spot":200,"target":260,"target_date":"2026-12-31","as_of":"2026-11-24"},
+ "mode":"equal_max_loss","budget":300,
+ "instruments":[
+  {"kind":"spot"},
+  {"kind":"option","strategy":"custom","legs":[{"kind":"call","side":"short","strike":220}],"expiry":"2026-12-31"},
+  {"kind":"spot","stop":180},
+  {"kind":"binary","strike":300,"expiry":"2026-12-31","price":0.97}]}

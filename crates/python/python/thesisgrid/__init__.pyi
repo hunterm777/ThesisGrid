@@ -1,0 +1,93 @@
+import datetime as _dt
+from typing import Any, Iterable, Literal, Sequence
+
+import numpy as np
+import numpy.typing as npt
+
+__version__: str
+STRATEGIES: tuple[str, ...]
+
+_Date = str | _dt.date
+AssetClass = Literal["crypto", "stock", "index", "commodity"]
+Mode = Literal["equal_dollars", "equal_max_loss", "equal_exposure", "manual"]
+Venue = Literal["kalshi", "polymarket", "hyperliquid", "custom"]
+Field = Literal["pnl", "pct", "value", "fees", "funding", "delta", "gamma", "theta", "vega", "liquidated"]
+
+class Thesis:
+    fields: dict[str, Any]
+    def __init__(
+        self, spot: float, target: float, target_date: _Date,
+        rate: float | None = ..., iv: float | None = ..., *,
+        underlying: str | None = ..., asset_class: AssetClass | None = ...,
+        as_of: _Date | None = ..., touch: Literal["by", "at"] | None = ...,
+        direction: Literal["bullish", "bearish"] | None = ...,
+        commodity_day_count: Literal["calendar365", "trading252"] | None = ...,
+    ) -> None: ...
+
+class _Instrument:
+    kind: str
+    fields: dict[str, Any]
+    def __init__(self, **fields: Any) -> None: ...
+
+class Spot(_Instrument):
+    def __init__(
+        self, *, side: Literal["long", "short"] = ..., price: float | None = ...,
+        fee_pct: float = ..., fee_fixed: float = ..., stop: float | None = ...,
+        qty: float | None = ..., label: str | None = ..., enabled: bool = ...,
+    ) -> None: ...
+
+class Perp(_Instrument):
+    def __init__(self, *, funding_8h: float | None = ..., **fields: Any) -> None: ...
+    @classmethod
+    def preset(cls, venue: Venue, **fields: Any) -> Perp: ...
+
+class Option(_Instrument):
+    @classmethod
+    def strategy(cls, name: str, strikes: Sequence[float], expiry: _Date, **fields: Any) -> Option: ...
+
+class Binary(_Instrument):
+    @classmethod
+    def preset(cls, venue: Venue, **fields: Any) -> Binary: ...
+
+def range_pct(lo: float = ..., hi: float = ..., steps: int = ...) -> dict[str, Any]: ...
+def price_range(lo: float, hi: float, steps: int = ...) -> dict[str, Any]: ...
+def price_list(values: Iterable[float]) -> dict[str, Any]: ...
+def daily(start: _Date | None = ..., end: _Date | None = ..., step: int = ...) -> dict[str, Any]: ...
+def date_list(dates: Iterable[_Date]) -> dict[str, Any]: ...
+
+class Scenario:
+    data: dict[str, Any]
+    def __init__(self, data: dict[str, Any]) -> None: ...
+    @property
+    def thesis(self) -> dict[str, Any]: ...
+    @property
+    def instruments(self) -> list[dict[str, Any]]: ...
+    def to_json(self) -> str: ...
+    def to_url(self, base: str | None = ...) -> str: ...
+    def compare(self) -> Result: ...
+
+class Result:
+    scenario: Scenario
+    raw: dict[str, Any]
+    prices: npt.NDArray[np.float64]
+    dates: list[_dt.date]
+    target_row: int
+    target_col: int
+    sizing_note: str
+    labels: list[str]
+    def errors(self) -> dict[str, str]: ...
+    def notes(self, label: str) -> list[str]: ...
+    def summary(self) -> list[dict[str, Any]]: ...
+    def grid(self, label: str, field: Field = ...) -> npt.NDArray[Any]: ...
+    def to_pandas(self) -> Any: ...
+    def to_csv(self) -> str: ...
+    def to_url(self, base: str | None = ...) -> str: ...
+
+def parse(text: str, spot: float, *, as_of: _Date | None = ..., **fields: Any) -> Thesis: ...
+def compare(
+    thesis: Thesis | Scenario, legs: Sequence[_Instrument] = ..., *,
+    mode: Mode | None = ..., budget: float | None = ...,
+    prices: dict[str, Any] | None = ..., dates: dict[str, Any] | None = ...,
+    display: Literal["dollars", "percent"] | None = ...,
+) -> Result: ...
+def from_url(link: str) -> Scenario: ...

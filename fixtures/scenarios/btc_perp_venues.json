@@ -1,0 +1,9 @@
+{"thesis":{"underlying":"BTC","asset_class":"crypto","spot":95000,"target":120000,
+  "target_date":"2027-01-29","as_of":"2026-11-24","touch":"by"},
+ "mode":"equal_dollars","budget":1000,
+ "instruments":[
+  {"kind":"perp","venue":"kalshi","leverage":3,"funding_rate":0.0004},
+  {"kind":"perp","venue":"kalshi","label":"kalshi tiny funding","leverage":3,"funding_rate":0.00005},
+  {"kind":"perp","venue":"polymarket","leverage":20,"funding_rate":0.0002},
+  {"kind":"perp","venue":"hyperliquid","leverage":10,"side":"short","funding_rate":-0.0001,"liquidity":"maker"}],
+ "grid":{"prices":{"kind":"range_pct","lo":-0.4,"hi":0.4,"steps":20},"dates":{"step":3},"display":"percent"}}

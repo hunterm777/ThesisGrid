@@ -1,0 +1,10 @@
+{"thesis":{"underlying":"GOLD","asset_class":"commodity","spot":3600,"target":3400,
+  "target_date":"2027-01-15","as_of":"2026-11-24","direction":"bearish","iv":0.18},
+ "mode":"equal_max_loss","budget":800,
+ "instruments":[
+  {"kind":"spot","side":"short","stop":3800},
+  {"kind":"perp","venue":"kalshi","asset":"commodity","side":"short","leverage":4,"funding_rate":-0.0003},
+  {"kind":"option","strategy":"bear_put_spread","strikes":[3300,3500],"expiry":"2027-01-15","model":"black76"},
+  {"kind":"binary","venue":"kalshi","contract":"range","lower":3300,"upper":3500,"expiry":"2027-01-15","price":0.3},
+  {"kind":"binary","venue":"hyperliquid","side":"no","strike":3500,"expiry":"2027-01-15","price":0.62,
+   "fees":{"model":"hip4","taker_rate":0.001,"maker_rate":0.0}}]}
